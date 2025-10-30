@@ -1,25 +1,46 @@
 export class Assets {
 
     public static getDefaultImage() {
-        const image: HTMLImageElement = document.querySelector("img#asset_degault");
+        const image: HTMLImageElement = document.querySelector("img#asset_default");
         if (image == null) {
             throw Error("No assets found");
         }
-        return image; 
+        return image;
     }
     // Ajout du getter d'asset player
-public static getPlayerImage() : HTMLImageElement{
-    const playerImage:HTMLImageElement = document.querySelector("img#asset_player");
-    if(playerImage == null){
-        throw Error("No seeets found");
+    public static getPlayerImage(): HTMLImageElement {
+        const image: HTMLImageElement = document.querySelector("img#asset_player");
+        if (image == null) {
+            throw Error("No aseeets found");
+        }
+        return image;
     }
-    return playerImage;
-}
-    // public static getEarthImage(): HTMLImageElement{
-    //     const image1:HTMLImageElement = document.querySelector("img#earth");
-    //     if( image1 == null){
-    //         throw Error("No assets found");
-    //     }
-    //     return image1 ;
-    // }
+    public static getAlienImage(): HTMLImageElement {
+        const image: HTMLImageElement = document.querySelector("img#asset_alien");
+        if (image == null) {
+            throw Error("No alien asset found");
+        }
+        return image;
+    }
+    public static getStarImage(): HTMLImageElement {
+        const image: HTMLImageElement = document.querySelector("img#asset_star");
+        if (image == null) {
+            throw Error("No star asset found");
+        }
+        return image;
+    }
+    public static getLaserImage(): HTMLImageElement {
+        const image: HTMLImageElement = document.querySelector("img#asset_laser");
+        if (image == null) {
+            throw Error("No laser asset found");
+        }
+        return image;
+    }
+    public static getEarthImage(): HTMLImageElement{
+        const image:HTMLImageElement = document.querySelector("img#asset_earth");
+        if( image == null){
+            throw Error("No assets found");
+        }
+        return image ;
+    }
 }

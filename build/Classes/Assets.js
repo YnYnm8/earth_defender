@@ -2,7 +2,7 @@ var Assets = /** @class */ (function () {
     function Assets() {
     }
     Assets.getDefaultImage = function () {
-        var image = document.querySelector("img#asset_degault");
+        var image = document.querySelector("img#asset_default");
         if (image == null) {
             throw Error("No assets found");
         }
@@ -10,11 +10,39 @@ var Assets = /** @class */ (function () {
     };
     // Ajout du getter d'asset player
     Assets.getPlayerImage = function () {
-        var playerImage = document.querySelector("img#asset_player");
-        if (playerImage == null) {
-            throw Error("No seeets found");
+        var image = document.querySelector("img#asset_player");
+        if (image == null) {
+            throw Error("No aseeets found");
         }
-        return playerImage;
+        return image;
+    };
+    Assets.getAlienImage = function () {
+        var image = document.querySelector("img#asset_alien");
+        if (image == null) {
+            throw Error("No alien asset found");
+        }
+        return image;
+    };
+    Assets.getStarImage = function () {
+        var image = document.querySelector("img#asset_star");
+        if (image == null) {
+            throw Error("No star asset found");
+        }
+        return image;
+    };
+    Assets.getLaserImage = function () {
+        var image = document.querySelector("img#asset_laser");
+        if (image == null) {
+            throw Error("No laser asset found");
+        }
+        return image;
+    };
+    Assets.getEarthImage = function () {
+        var image = document.querySelector("img#asset_earth");
+        if (image == null) {
+            throw Error("No assets found");
+        }
+        return image;
     };
     return Assets;
 }());
